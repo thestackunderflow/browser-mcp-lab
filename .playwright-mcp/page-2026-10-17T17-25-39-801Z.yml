@@ -1,0 +1,13 @@
+- main [ref=f3e2]:
+  - heading "Checkout Lab" [level=1] [ref=f3e3]
+  - paragraph [ref=f3e4]: A local test shop. No real payments, no real customers.
+  - generic [ref=f3e5]:
+    - generic [ref=f3e6]: Customer ID
+    - textbox "Customer ID" [ref=f3e7]: c-1001
+    - generic [ref=f3e8]: Product
+    - combobox "Product" [ref=f3e9]:
+      - option "Blue mug" [selected]
+      - option "Notebook"
+    - generic [ref=f3e10]: Quantity
+    - spinbutton "Quantity" [ref=f3e11]: "1"
+    - button "Place order" [ref=f3e12] [cursor=pointer]

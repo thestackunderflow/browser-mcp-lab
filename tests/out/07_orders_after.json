@@ -1,0 +1,16 @@
+{
+  "status": 200,
+  "body": [
+    {
+      "id": "ord-1001",
+      "customerId": "c-1001",
+      "items": [
+        {
+          "sku": "mug-blue",
+          "qty": 2
+        }
+      ],
+      "createdAt": "2026-10-17T17:25:55.459Z"
+    }
+  ]
+}

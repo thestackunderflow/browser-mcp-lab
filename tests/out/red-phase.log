@@ -1,0 +1,93 @@
+ Network checkout-mcp-lab_default  Creating
+ Network checkout-mcp-lab_default  Created
+✖ 0: versions: Chrome, both servers report the pinned versions (119.516529ms)
+✖ 1: tools/list: what each server offers the agent (and how much text that costs) (0.361601ms)
+✖ 2: the API on its own: the field name decides 500 vs 201 (0.045324ms)
+✖ 3: Playwright MCP reproduces the lie: "Order placed!" on screen, no order on the server (0.070019ms)
+✖ 4: Playwright MCP alone also sees the failed request and the console error (0.040153ms)
+✖ 5: Chrome DevTools MCP: same app, its own browser; network detail + console (0.038609ms)
+✖ 6: two servers, two browsers: a fresh DevTools server does not see Playwright's tab (0.120737ms)
+✖ 7: the reference fix: same steps, HTTP 201, the order is saved, the page names it (0.059916ms)
+✖ 8: the fix gates on the reply: an unknown customer gets an error on screen, not "Order placed" (0.151632ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 0
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 208.457228
+
+✖ failing tests:
+
+test at tests/lab.test.mjs:100:1
+✖ 0: versions: Chrome, both servers report the pinned versions (119.516529ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:110:1
+✖ 1: tools/list: what each server offers the agent (and how much text that costs) (0.361601ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:127:1
+✖ 2: the API on its own: the field name decides 500 vs 201 (0.045324ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:139:1
+✖ 3: Playwright MCP reproduces the lie: "Order placed!" on screen, no order on the server (0.070019ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:148:1
+✖ 4: Playwright MCP alone also sees the failed request and the console error (0.040153ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:164:1
+✖ 5: Chrome DevTools MCP: same app, its own browser; network detail + console (0.038609ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:190:1
+✖ 6: two servers, two browsers: a fresh DevTools server does not see Playwright's tab (0.120737ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:201:1
+✖ 7: the reference fix: same steps, HTTP 201, the order is saved, the page names it (0.059916ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)
+
+test at tests/lab.test.mjs:214:1
+✖ 8: the fix gates on the reply: an unknown customer gets an error on screen, not "Order placed" (0.151632ms)
+  Error: McpClient.start: not implemented
+      at McpClient.start (file:///work/tests/mcp_client.mjs:4:25)
+      at TestContext.<anonymous> (file:///work/tests/lab.test.mjs:93:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async TestHook.run (node:internal/test_runner/test:1054:7)

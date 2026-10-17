@@ -1,0 +1,29 @@
+## Request http://localhost:3000/api/orders
+Status: 500
+### Request Headers
+- sec-ch-ua-platform:"Linux"
+- referer:http://localhost:3000/
+- user-agent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36
+- sec-ch-ua:"Google Chrome";v="155", "Chromium";v="155", "Not(A:Brand";v="24"
+- content-type:application/json
+- sec-ch-ua-mobile:?0
+- accept:*/*
+- accept-encoding:gzip, deflate, br, zstd
+- accept-language:en-US,en;q=0.9
+- connection:keep-alive
+- content-length:61
+- host:localhost:3000
+- origin:http://localhost:3000
+- sec-fetch-dest:empty
+- sec-fetch-mode:cors
+- sec-fetch-site:same-origin
+### Request Body
+{"customer_id":"c-1001","items":[{"sku":"mug-blue","qty":2}]}
+### Response Headers
+- connection:keep-alive
+- date:Sat, 17 Oct 2026 17:25:54 GMT
+- keep-alive:timeout=5
+- transfer-encoding:chunked
+- content-type:application/json
+### Response Body
+{"error":"Internal Server Error"}

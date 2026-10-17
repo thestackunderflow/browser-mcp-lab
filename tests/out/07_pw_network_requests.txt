@@ -1,0 +1,4 @@
+### Result
+3. [POST] http://localhost:3001/api/orders => [201] Created
+
+Note: 2 static requests not shown, run with "static" option to see them.

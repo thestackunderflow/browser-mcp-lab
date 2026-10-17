@@ -1,0 +1,7 @@
+{"t":"2026-10-17T17:25:54.722Z","dir":"client->server","msg":{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"checkout-mcp-lab","version":"0.1"}}}}
+{"t":"2026-10-17T17:25:55.018Z","dir":"server-stderr","msg":"turning off usage statistics. process.env['CI'] || process.env['CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS'] is set.\n"}
+{"t":"2026-10-17T17:25:55.117Z","dir":"server-stderr","msg":"chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,\ndebug, and modify any data in the browser or DevTools.\nAvoid sharing sensitive or personal information that you do not want to share with MCP clients.\n"}
+{"t":"2026-10-17T17:25:55.124Z","dir":"server->client","msg":{"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{},"tools":{"listChanged":true}},"serverInfo":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"1.11.0"}},"jsonrpc":"2.0","id":1}}
+{"t":"2026-10-17T17:25:55.124Z","dir":"client->server","msg":{"jsonrpc":"2.0","method":"notifications/initialized"}}
+{"t":"2026-10-17T17:25:55.124Z","dir":"client->server","msg":{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"list_pages","arguments":{}}}}
+{"t":"2026-10-17T17:25:55.246Z","dir":"server->client","msg":{"result":{"content":[{"type":"text","text":"## Pages\n1: about:blank [selected]"}]},"jsonrpc":"2.0","id":2}}

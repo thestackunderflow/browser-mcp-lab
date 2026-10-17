@@ -1,0 +1,15 @@
+## Latest page snapshot
+uid=1_0 RootWebArea "Checkout Lab" url="http://localhost:3000/"
+  uid=1_1 main
+    uid=1_2 heading "Checkout Lab" level="1"
+    uid=1_3 "A local test shop. No real payments, no real customers."
+    uid=1_4 form
+      uid=1_5 "Customer ID"
+      uid=1_6 textbox "Customer ID" value="c-1001"
+      uid=1_7 "Product"
+      uid=1_8 combobox "Product" expandable haspopup="menu" value="Blue mug"
+        uid=1_9 option "Blue mug" selected
+        uid=1_10 option "Notebook"
+      uid=1_11 "Quantity"
+      uid=1_12 spinbutton "Quantity" value="1" valuemax="0" valuemin="1" valuetext="1"
+      uid=1_13 button "Place order"

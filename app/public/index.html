@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout Lab</title>
+  <style>
+    body { font: 18px/1.5 system-ui, sans-serif; background: #f6f7fb; color: #1d2433; margin: 0; }
+    main { max-width: 420px; margin: 48px auto; background: #fff; border-radius: 12px; padding: 28px 32px;
+           box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    h1 { font-size: 26px; margin: 0 0 4px; }
+    p.note { color: #5b6475; font-size: 14px; margin: 0 0 20px; }
+    label { display: block; margin: 14px 0 4px; font-weight: 600; }
+    input, select { width: 100%; box-sizing: border-box; font: inherit; padding: 8px 10px; border: 1px solid #c7ccd8; border-radius: 8px; }
+    button { margin-top: 22px; width: 100%; font: inherit; font-weight: 700; padding: 12px; border: 0; border-radius: 8px;
+             background: #2f5bea; color: #fff; cursor: pointer; }
+    #notice { margin-top: 18px; padding: 12px 14px; border-radius: 8px; font-weight: 700; display: none; }
+    #notice.ok { display: block; background: #e3f6e8; color: #17692f; }
+    #notice.error { display: block; background: #fde8e8; color: #9b1c1c; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Checkout Lab</h1>
+    <p class="note">A local test shop. No real payments, no real customers.</p>
+    <form id="checkout">
+      <label for="customerId">Customer ID</label>
+      <input id="customerId" name="customerId" value="c-1001">
+      <label for="sku">Product</label>
+      <select id="sku" name="sku">
+        <option value="mug-blue">Blue mug</option>
+        <option value="notebook">Notebook</option>
+      </select>
+      <label for="qty">Quantity</label>
+      <input id="qty" name="qty" type="number" min="1" value="1">
+      <button type="submit">Place order</button>
+    </form>
+    <div id="notice" role="status"></div>
+  </main>
+  <script src="/checkout.js"></script>
+</body>
+</html>

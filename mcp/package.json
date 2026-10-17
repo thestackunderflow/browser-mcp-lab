@@ -1,0 +1,9 @@
+{
+  "name": "checkout-mcp-lab-servers",
+  "private": true,
+  "description": "The two MCP servers under test, pinned exactly (lab snapshot 17 Oct 2026).",
+  "dependencies": {
+    "@playwright/mcp": "0.0.83",
+    "chrome-devtools-mcp": "1.11.0"
+  }
+}

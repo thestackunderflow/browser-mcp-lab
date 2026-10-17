@@ -1,0 +1,26 @@
+### Result
+#3 [POST] http://localhost:3000/api/orders
+
+  General
+    status:    [500] Internal Server Error
+    duration:  2ms
+    type:      fetch
+    mimeType:  application/json
+
+  Request headers
+    sec-ch-ua-platform: "Linux"
+    referer: http://localhost:3000/
+    user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36
+    sec-ch-ua: "Google Chrome";v="155", "Chromium";v="155", "Not(A:Brand";v="24"
+    content-type: application/json
+    sec-ch-ua-mobile: ?0
+
+  Response headers
+    transfer-encoding: chunked
+    keep-alive: timeout=5
+    date: Sat, 17 Oct 2026 17:25:51 GMT
+    content-type: application/json
+    connection: keep-alive
+
+Call browser_network_request with part="request-body" to read the request body.
+Call browser_network_request with part="response-body" to read the response body.

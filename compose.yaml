@@ -1,0 +1,11 @@
+services:
+  # Tests 0-8: a small MCP client (tests/mcp_client.mjs) drives both pinned servers against the local app.
+  tests:
+    build: .
+    image: checkout-mcp-lab:0.1
+    init: true
+    shm_size: 1gb
+    volumes:
+      - .:/work
+    working_dir: /work
+    command: ["node", "--test", "--test-concurrency=1", "--test-reporter=spec", "tests/lab.test.mjs"]

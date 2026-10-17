@@ -1,0 +1,2 @@
+### Result
+{"customer_id":"c-1001","items":[{"sku":"mug-blue","qty":2}]}

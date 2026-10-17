@@ -1,0 +1,38 @@
+{
+  "wrong_field": {
+    "status": 500,
+    "body": {
+      "error": "Internal Server Error"
+    }
+  },
+  "right_field": {
+    "status": 201,
+    "body": {
+      "id": "ord-1001",
+      "customerId": "c-1001",
+      "items": [
+        {
+          "sku": "mug-blue",
+          "qty": 2
+        }
+      ],
+      "createdAt": "2026-10-17T17:25:51.261Z"
+    }
+  },
+  "orders_after": {
+    "status": 200,
+    "body": [
+      {
+        "id": "ord-1001",
+        "customerId": "c-1001",
+        "items": [
+          {
+            "sku": "mug-blue",
+            "qty": 2
+          }
+        ],
+        "createdAt": "2026-10-17T17:25:51.261Z"
+      }
+    ]
+  }
+}

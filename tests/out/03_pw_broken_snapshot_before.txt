@@ -1,0 +1,19 @@
+### Page
+- Page URL: http://localhost:3000/
+- Page Title: Checkout Lab
+### Snapshot
+```yaml
+- main [ref=e2]:
+  - heading "Checkout Lab" [level=1] [ref=e3]
+  - paragraph [ref=e4]: A local test shop. No real payments, no real customers.
+  - generic [ref=e5]:
+    - generic [ref=e6]: Customer ID
+    - textbox "Customer ID" [ref=e7]: c-1001
+    - generic [ref=e8]: Product
+    - combobox "Product" [ref=e9]:
+      - option "Blue mug" [selected]
+      - option "Notebook"
+    - generic [ref=e10]: Quantity
+    - spinbutton "Quantity" [ref=e11]: "1"
+    - button "Place order" [ref=e12] [cursor=pointer]
+```

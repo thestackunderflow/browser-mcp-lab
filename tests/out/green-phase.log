@@ -1,0 +1,17 @@
+✔ 0: versions: Chrome, both servers report the pinned versions (738.317835ms)
+✔ 1: tools/list: what each server offers the agent (and how much text that costs) (13.95669ms)
+✔ 2: the API on its own: the field name decides 500 vs 201 (13.40601ms)
+✔ 3: Playwright MCP reproduces the lie: "Order placed!" on screen, no order on the server (2361.013078ms)
+✔ 4: Playwright MCP alone also sees the failed request and the console error (23.5653ms)
+✔ 5: Chrome DevTools MCP: same app, its own browser; network detail + console (1069.964986ms)
+✔ 6: two servers, two browsers: a fresh DevTools server does not see Playwright's tab (587.645346ms)
+✔ 7: the reference fix: same steps, HTTP 201, the order is saved, the page names it (2218.837819ms)
+✔ 8: the fix gates on the reply: an unknown customer gets an error on screen, not "Order placed" (2163.670848ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9389.087022

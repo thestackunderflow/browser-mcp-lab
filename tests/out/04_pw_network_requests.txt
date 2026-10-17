@@ -1,0 +1,4 @@
+### Result
+3. [POST] http://localhost:3000/api/orders => [500] Internal Server Error
+
+Note: 2 static requests not shown, run with "static" option to see them.

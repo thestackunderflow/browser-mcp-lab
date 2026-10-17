@@ -1,0 +1,19 @@
+{
+  "chrome": "Google Chrome 155.0.8059.84",
+  "node": "v22.23.3",
+  "playwright_mcp": {
+    "name": "Playwright",
+    "version": "1.64.0-alpha-1790635538000"
+  },
+  "chrome_devtools_mcp": {
+    "name": "chrome_devtools",
+    "title": "Chrome DevTools MCP server",
+    "version": "1.11.0"
+  },
+  "playwright_protocol": "2025-06-18",
+  "devtools_protocol": "2025-06-18",
+  "npm": {
+    "@playwright/mcp": "0.0.83",
+    "chrome-devtools-mcp": "1.11.0"
+  }
+}
