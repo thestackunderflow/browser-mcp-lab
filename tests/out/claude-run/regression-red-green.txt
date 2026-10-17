@@ -1,0 +1,10 @@
+== Claude test on the ORIGINAL app (expect red)
+not ok 1 - the order the checkout form sends is saved
+not ok 2 - a failed order is not reported as placed
+# pass 0
+# fail 2
+== Claude test on Claude-fixed app (expect green)
+ok 1 - the order the checkout form sends is saved
+ok 2 - a failed order is not reported as placed
+# pass 2
+# fail 0

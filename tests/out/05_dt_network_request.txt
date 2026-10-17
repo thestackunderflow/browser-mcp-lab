@@ -21,7 +21,7 @@ Status: 500
 {"customer_id":"c-1001","items":[{"sku":"mug-blue","qty":2}]}
 ### Response Headers
 - connection:keep-alive
-- date:Sat, 17 Oct 2026 17:25:54 GMT
+- date:Sat, 17 Oct 2026 17:38:29 GMT
 - keep-alive:timeout=5
 - transfer-encoding:chunked
 - content-type:application/json

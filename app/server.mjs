@@ -1,4 +1,4 @@
-// Checkout Lab: a tiny local shop with ONE planted bug (see README). No dependencies, no real payments,
+// Checkout Lab: a tiny local shop for testing browser MCP servers. No dependencies, no real payments,
 // nothing leaves this machine. Orders live in memory; POST /api/reset clears them.
 import http from 'node:http';
 import fs from 'node:fs/promises';

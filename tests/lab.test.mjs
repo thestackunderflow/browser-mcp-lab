@@ -112,13 +112,13 @@ test('0: versions: Chrome, both servers report the pinned versions', () => {
   assert.equal(dt.serverInfo.version, '1.11.0');
 });
 
-test('1: tools/list: what each server offers the agent (and how much text that costs)', async () => {
+test('1: tools/list: what each server offers (default capabilities) and how much tool JSON it serves', async () => {
   const pt = await pw.listTools(), dtt = await dt.listTools();
   save('01_tools_playwright.json', pt); save('01_tools_devtools.json', dtt);
   const names = t => t.map(x => x.name).sort();
   const summary = {
-    playwright: { count: pt.length, json_bytes: JSON.stringify(pt).length, names: names(pt) },
-    devtools: { count: dtt.length, json_bytes: JSON.stringify(dtt).length, names: names(dtt) },
+    playwright: { count: pt.length, json_chars: JSON.stringify(pt).length, names: names(pt) },
+    devtools: { count: dtt.length, json_chars: JSON.stringify(dtt).length, names: names(dtt) },
   };
   save('01_tools_summary.json', summary);
   for (const n of ['browser_navigate', 'browser_snapshot', 'browser_click', 'browser_type', 'browser_fill_form',
@@ -203,8 +203,17 @@ test('5: Chrome DevTools MCP: same app, its own browser; network detail + consol
   assert.deepEqual((await api(BROKEN, 'GET', '/api/orders')).body, []);
 });
 
-test('6: two servers, two browsers: a fresh DevTools server does not see Playwright\'s tab', async () => {
-  // Playwright's browser is still on localhost:3000 (test 3). A new DevTools MCP server starts its own Chrome.
+test('6: with these flags, two servers start two separate Chromes (two profiles)', async () => {
+  // Both servers are running now; each launched its own Chrome. The browser (top-level) processes carry their
+  // profile folder in --user-data-dir: two different folders = two browsers that share nothing (tabs, cookies).
+  // This follows from the lab's flags; both servers can instead attach to an already running Chrome.
+  const ps = execFileSync('ps', ['-eo', 'pid,args', '--no-headers']).toString().split('\n')
+    .filter(l => /\/chrome(\s|$)/.test(l) && l.includes('--user-data-dir=') && !l.includes('--type='));
+  const dirs = [...new Set(ps.map(l => l.match(/--user-data-dir=(\S+)/)[1]))];
+  save('06_browser_processes.txt', ps.map(l => l.trim().slice(0, 400)).join('\n') + '\n');
+  save('06_profiles.json', { browser_processes: ps.length, profile_dirs: dirs });
+  assert.ok(dirs.length >= 2, 'expected two browser profiles, got ' + JSON.stringify(dirs));
+  // And a fresh DevTools server, started now, lists only its own blank tab.
   const fresh = new McpClient(...DEVTOOLS, { log: path.join(OUT, 'devtools-mcp-fresh.jsonl') });
   await fresh.start();
   try {

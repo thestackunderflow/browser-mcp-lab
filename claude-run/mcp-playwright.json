@@ -1,0 +1,5 @@
+{ "mcpServers": { "playwright": {
+      "command": "docker",
+      "args": ["exec", "-i", "checkout-lab-run", "python3", "/proxy/mcp_log_proxy.py", "--log", "/out/playwright-mcp.jsonl", "--png-dir", "/out",
+               "--", "playwright-mcp", "--browser", "chrome", "--headless", "--isolated", "--no-sandbox", "--output-dir", "/out/pw-files"]
+    } } }

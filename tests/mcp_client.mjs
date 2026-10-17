@@ -1,4 +1,4 @@
-// A small MCP client over stdio: starts the server as a child process and speaks JSON-RPC 2.0, one message
+// A 90-line MCP client over stdio: starts the server as a child process and speaks JSON-RPC 2.0, one message
 // per line, on its stdin/stdout. No SDK. Every line both ways is logged (JSONL) with a timestamp; image data in
 // the log is replaced by its size (the caller still gets the full image).
 import { spawn } from 'node:child_process';

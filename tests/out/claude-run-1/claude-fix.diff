@@ -1,0 +1,43 @@
+diff --git a/app/api.mjs b/app/api.mjs
+index 31f482d..a886bee 100644
+--- a/app/api.mjs
++++ b/app/api.mjs
+@@ -3,7 +3,7 @@ export function handle(method, pathname, body, db) {
+   if (method === 'GET' && pathname === '/api/orders') return { status: 200, json: db.orders };
+   if (method === 'POST' && pathname === '/api/reset') { db.orders.length = 0; return { status: 200, json: { ok: true } }; }
+   if (method === 'POST' && pathname === '/api/orders') {
+-    const customer = db.customers.get(body.customerId);
++    const customer = db.customers.get(body.customer_id);
+     const order = {
+       id: `ord-${1000 + db.orders.length + 1}`,
+       customerId: customer.id,
+diff --git a/app/tests/orders.test.mjs b/app/tests/orders.test.mjs
+new file mode 100644
+index 0000000..fb3f36d
+--- /dev/null
++++ b/app/tests/orders.test.mjs
+@@ -0,0 +1,24 @@
++// Regression test: the order the browser sends must be saved, not crash the API.
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import { handle } from '../api.mjs';
++
++function freshDb() {
++  return { orders: [], customers: new Map([['c-1001', { id: 'c-1001', name: 'Test Customer' }]]) };
++}
++
++test('POST /api/orders saves the payload checkout.js sends', () => {
++  const db = freshDb();
++  // Exact body captured from the browser's POST /api/orders request.
++  const body = { customer_id: 'c-1001', items: [{ sku: 'mug-blue', qty: 2 }] };
++
++  const res = handle('POST', '/api/orders', body, db);
++
++  assert.equal(res.status, 201);
++  assert.equal(res.json.customerId, 'c-1001');
++  assert.deepEqual(res.json.items, [{ sku: 'mug-blue', qty: 2 }]);
++
++  const list = handle('GET', '/api/orders', {}, db);
++  assert.equal(list.json.length, 1);
++  assert.equal(list.json[0].id, res.json.id);
++});

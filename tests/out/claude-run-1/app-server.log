@@ -1,0 +1,12 @@
+Checkout Lab on http://localhost:3000
+POST /api/orders -> 500
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Module.handle (file:///work/app/api.mjs?v=1792258016261.3513:9:28)
+    at Server.<anonymous> (file:///work/app/server.mjs:35:50)
+POST /api/orders -> 500
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Module.handle (file:///work/app/api.mjs?v=1792258016261.3513:9:28)
+    at Server.<anonymous> (file:///work/app/server.mjs:35:50)
+GET /api/orders -> 200
+POST /api/orders -> 201
+GET /api/orders -> 200

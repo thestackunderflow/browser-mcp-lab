@@ -1,0 +1,5 @@
+{ "mcpServers": { "chrome-devtools": {
+      "command": "docker",
+      "args": ["exec", "-i", "checkout-lab-run", "python3", "/proxy/mcp_log_proxy.py", "--log", "/out/devtools-mcp.jsonl", "--png-dir", "/out",
+               "--", "chrome-devtools-mcp", "--headless", "--isolated", "--no-usage-statistics", "--no-performance-crux", "--chromeArg=--no-sandbox"]
+    } } }

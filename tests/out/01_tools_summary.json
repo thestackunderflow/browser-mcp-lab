@@ -1,7 +1,7 @@
 {
   "playwright": {
     "count": 25,
-    "json_bytes": 20286,
+    "json_chars": 20286,
     "names": [
       "browser_click",
       "browser_close",
@@ -32,7 +32,7 @@
   },
   "devtools": {
     "count": 32,
-    "json_bytes": 29361,
+    "json_chars": 29361,
     "names": [
       "click",
       "close_page",
